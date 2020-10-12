@@ -5,6 +5,7 @@ ctx.canvas.width = canvas.clientWidth;
 ctx.canvas.height = canvas.clientHeight;
 
 let swatches = [];
+let offsetIncrease = 3;
 
 let swatchAmount = 6;
 let size = {
@@ -33,7 +34,7 @@ function draw() {
     //Calculate new total width
     totalWidth = totalWidth + size.x-offset;
     //Make each swatch-column smaller the further right it is
-    offset = offset + 3;
+    offset = offset + offsetIncrease;
   }
 
   requestAnimationFrame(draw)
